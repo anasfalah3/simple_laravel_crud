@@ -1,6 +1,6 @@
 @extends('products.layout')
+@section('title','Add Product')
 @section('header','Create a Product')
-
 @section('content')
     
       <div>
@@ -12,7 +12,8 @@
                 </ul>
             @endif
       </div>
-      <form action="{{route("product.store", ['product',])}}" method="post">
+      
+      <form class="row g-3" action="{{route("product.store", ['product',])}}" method="post">
             @csrf
             <div class="form-floating mb-3">
                   <input type="text" class="form-control" name="name" id="name" placeholder="Name">

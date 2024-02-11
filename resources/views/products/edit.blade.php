@@ -1,4 +1,5 @@
 @extends('products.layout')
+@section('title','update Product')
 @section('header','Edit a Product')
 @section('content')
       <div>
@@ -10,7 +11,7 @@
                 </ul>
             @endif
       </div>
-      <form action="{{route('product.update',['product'=>$product])}}" method="post" >
+      <form class="row g-3" action="{{route('product.update',['product'=>$product])}}" method="post" >
             @csrf
             @method('put')
             <div class="form-floating mb-3">

@@ -1,11 +1,14 @@
 @extends('products.layout')
+@section('title','accueil')
 @section('header','Product')
 @section('content')
+
       <div>
             @if (session()->has('success'))
                 {{session('success')}}
             @endif
       </div>
+      
       <div>
             <div>
                   <a class="btn btn-primary" href="{{route('product.create')}}">Create a product</a>
